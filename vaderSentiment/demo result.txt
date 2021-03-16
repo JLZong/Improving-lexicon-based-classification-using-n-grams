@@ -1,0 +1,122 @@
+----------------------------------------------------
+ - Analyze typical example cases, including handling of:
+  -- negations
+  -- punctuation emphasis & punctuation flooding
+  -- word-shape as emphasis (capitalization difference)
+  -- degree modifiers (intensifiers such as 'very' and dampeners such as 'kind of')
+  -- slang words as modifiers such as 'uber' or 'friggin' or 'kinda'
+  -- contrastive conjunction 'but' indicating a shift in sentiment; sentiment of later text is dominant
+  -- use of contractions as negations
+  -- sentiment laden emoticons such as :) and :D
+  -- utf-8 encoded emojis such as 💘 and 💋 and 😁
+  -- sentiment laden slang words (e.g., 'sux')
+  -- sentiment laden initialisms and acronyms (for example: 'lol') 
+
+VADER is smart, handsome, and funny.----------------------------- {'neg': 0.0, 'neu': 0.254, 'pos': 0.746, 'compound': 0.8316}
+VADER is smart, handsome, and funny!----------------------------- {'neg': 0.0, 'neu': 0.248, 'pos': 0.752, 'compound': 0.8439}
+VADER is very smart, handsome, and funny.------------------------ {'neg': 0.0, 'neu': 0.299, 'pos': 0.701, 'compound': 0.8545}
+VADER is VERY SMART, handsome, and FUNNY.------------------------ {'neg': 0.0, 'neu': 0.246, 'pos': 0.754, 'compound': 0.9227}
+VADER is VERY SMART, handsome, and FUNNY!!!---------------------- {'neg': 0.0, 'neu': 0.233, 'pos': 0.767, 'compound': 0.9342}
+VADER is VERY SMART, uber handsome, and FRIGGIN FUNNY!!!--------- {'neg': 0.0, 'neu': 0.294, 'pos': 0.706, 'compound': 0.9469}
+VADER is not smart, handsome, nor funny.------------------------- {'neg': 0.646, 'neu': 0.354, 'pos': 0.0, 'compound': -0.7424}
+The book was good.----------------------------------------------- {'neg': 0.0, 'neu': 0.508, 'pos': 0.492, 'compound': 0.4404}
+At least it isn't a horrible book.------------------------------- {'neg': 0.0, 'neu': 0.678, 'pos': 0.322, 'compound': 0.431}
+The book was only kind of good.---------------------------------- {'neg': 0.0, 'neu': 0.697, 'pos': 0.303, 'compound': 0.3832}
+The plot was good, but the characters are uncompelling and the dialog is not great. {'neg': 0.327, 'neu': 0.579, 'pos': 0.094, 'compound': -0.7042}
+Today SUX!------------------------------------------------------- {'neg': 0.779, 'neu': 0.221, 'pos': 0.0, 'compound': -0.5461}
+Today only kinda sux! But I'll get by, lol----------------------- {'neg': 0.127, 'neu': 0.556, 'pos': 0.317, 'compound': 0.5249}
+Make sure you :) or :D today!------------------------------------ {'neg': 0.0, 'neu': 0.294, 'pos': 0.706, 'compound': 0.8633}
+Catch utf-8 emoji such as 💘 and 💋 and 😁-------------------------- {'neg': 0.0, 'neu': 0.583, 'pos': 0.417, 'compound': 0.875}
+Not bad at all--------------------------------------------------- {'neg': 0.0, 'neu': 0.513, 'pos': 0.487, 'compound': 0.431}
+----------------------------------------------------
+ - About the scoring: 
+  -- The 'compound' score is computed by summing the valence scores of each word in the lexicon, adjusted
+     according to the rules, and then normalized to be between -1 (most extreme negative) and +1 (most extreme positive).
+     This is the most useful metric if you want a single unidimensional measure of sentiment for a given sentence.
+     Calling it a 'normalized, weighted composite score' is accurate.
+  -- The 'pos', 'neu', and 'neg' scores are ratios for proportions of text that fall in each category (so these
+     should all add up to be 1... or close to it with float operation).  These are the most useful metrics if
+     you want multidimensional measures of sentiment for a given sentence.
+----------------------------------------------------
+----------------------------------------------------
+ - Analyze examples of tricky sentences that cause trouble to other sentiment analysis tools.
+  -- special case idioms - e.g., 'never good' vs 'never this good', or 'bad' vs 'bad ass'.
+  -- special uses of 'least' as negation versus comparison 
+
+Sentiment analysis has never been good.------------------------------ {'neg': 0.325, 'neu': 0.675, 'pos': 0.0, 'compound': -0.3412}
+Sentiment analysis has never been this good!------------------------- {'neg': 0.0, 'neu': 0.621, 'pos': 0.379, 'compound': 0.5672}
+Most automated sentiment analysis tools are shit.-------------------- {'neg': 0.375, 'neu': 0.625, 'pos': 0.0, 'compound': -0.5574}
+With VADER, sentiment analysis is the shit!-------------------------- {'neg': 0.0, 'neu': 0.583, 'pos': 0.417, 'compound': 0.6476}
+Other sentiment analysis tools can be quite bad.--------------------- {'neg': 0.351, 'neu': 0.649, 'pos': 0.0, 'compound': -0.5849}
+On the other hand, VADER is quite bad ass---------------------------- {'neg': 0.0, 'neu': 0.423, 'pos': 0.577, 'compound': 0.802}
+VADER is such a badass!---------------------------------------------- {'neg': 0.0, 'neu': 0.598, 'pos': 0.402, 'compound': 0.4003}
+Without a doubt, excellent idea.------------------------------------- {'neg': 0.0, 'neu': 0.341, 'pos': 0.659, 'compound': 0.7013}
+Roger Dodger is one of the most compelling variations on this theme.- {'neg': 0.0, 'neu': 0.834, 'pos': 0.166, 'compound': 0.2944}
+Roger Dodger is at least compelling as a variation on the theme.----- {'neg': 0.0, 'neu': 0.853, 'pos': 0.147, 'compound': 0.2263}
+Roger Dodger is one of the least compelling variations on this theme. {'neg': 0.132, 'neu': 0.868, 'pos': 0.0, 'compound': -0.1695}
+Not such a badass after all.----------------------------------------- {'neg': 0.289, 'neu': 0.711, 'pos': 0.0, 'compound': -0.2584}
+Without a doubt, an excellent idea.---------------------------------- {'neg': 0.0, 'neu': 0.408, 'pos': 0.592, 'compound': 0.7013}
+----------------------------------------------------
+----------------------------------------------------
+ - VADER works best when analysis is done at the sentence level (but it can work on single words or entire novels).
+  -- For example, given the following paragraph text from a hypothetical movie review:
+	'It was one of the worst movies I've seen, despite good reviews. Unbelievably bad acting!! Poor direction. VERY poor production. The movie was bad. Very bad movie. VERY BAD movie!'
+  -- You could use NLTK to break the paragraph into sentence tokens for VADER, then average the results for the paragraph like this: 
+
+It was one of the worst movies I've seen, despite good reviews.------ -0.7584
+Unbelievably bad acting!!-------------------------------------------- -0.6572
+Poor direction.------------------------------------------------------ -0.4767
+VERY poor production.------------------------------------------------ -0.6281
+The movie was bad.--------------------------------------------------- -0.5423
+Very bad movie.------------------------------------------------------ -0.5849
+VERY BAD movie!------------------------------------------------------ -0.7616
+AVERAGE SENTIMENT FOR PARAGRAPH: 	-0.6299
+----------------------------------------------------
+----------------------------------------------------
+ - Analyze sentiment of IMAGES/VIDEO data based on annotation 'tags' or image labels. 
+
+balloons------- 0.0
+cake----------- 0.0
+candles-------- 0.0
+happy birthday- 0.5719
+friends-------- 0.4767
+laughing------- 0.4939
+smiling-------- 0.4588
+party---------- 0.4019
+AVERAGE SENTIMENT OF TAGS/LABELS: 	0.3004
+	
+riot----------- -0.5574
+fire----------- -0.34
+fight---------- -0.3818
+blood---------- 0.0
+mob------------ 0.0
+war------------ -0.5994
+police--------- 0.0
+tear gas------- 0.0
+AVERAGE SENTIMENT OF TAGS/LABELS: 	-0.2348
+----------------------------------------------------
+
+Would you like to run VADER demo examples with NON-ENGLISH text? 
+ (Note: requires Internet access and uses the 'requests' library) 
+ Type 'y' or 'n', then press Enter: y
+
+----------------------------------------------------
+ - Analyze sentiment of NON ENGLISH text...for example:
+  -- French, German, Spanish, Italian, Russian, Japanese, Arabic, Chinese(Simplified) , Chinese(Traditional)
+  -- many other languages supported. 
+
+- English : I'm surprised to see just how amazingly helpful VADER is!            	 0.6468 (No translation needed)
+- French  : Je suis surpris de voir comment VADER est incroyablement utile !     	 0.6581 (MemoryNet Translation Service)
+- German  : Ich bin überrascht zu sehen, nur wie erstaunlich nützlich VADER!     	 0.6581 (MemoryNet Translation Service)
+- Spanish : Me sorprende ver sólo cómo increíblemente útil VADER!                	 0.7707 (MemoryNet Translation Service)
+- Italian : Sono sorpreso di vedere solo come incredibilmente utile VADER è!     	 0.6581 (MemoryNet Translation Service)
+- Russian : Я удивлен увидеть, как раз как удивительно полезно ВЕЙДЕРА!          	 0.6581 (MemoryNet Translation Service)
+- Japanese: 私はちょうどどのように驚くほど役に立つベイダーを見て驚いています!                                    	 0.6581 (MemoryNet Translation Service)
+- Arabic  : أنا مندهش لرؤية فقط كيف مثير للدهشة فيدر فائدة!                      	 0.7707 (MemoryNet Translation Service)
+- Chinese(Simplified): 我很惊讶地看到VADER是如此有用!                                                   	 0.6239 (MemoryNet Translation Service)
+- Chinese(Traditional): 我很驚訝地看到VADER是如此有用!                                                   	 0.6239 (MemoryNet Translation Service)
+----------------------------------------------------
+
+
+ Demo Done!
+
