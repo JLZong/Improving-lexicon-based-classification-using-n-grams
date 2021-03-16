@@ -16,6 +16,117 @@ I hate you a little---------------------------------------------- {'neg': 0.481,
 I hate you------------------------------------------------------- {'neg': 0.649, 'neu': 0.351, 'pos': 0.0, 'compound': -0.5719}
 I hate you very much--------------------------------------------- {'neg': 0.481, 'neu': 0.519, 'pos': 0.0, 'compound': -0.5719}
 
+-----------------------------------------------------------------Demo of The Raven-----------------------------------------------------------------
+Once upon a midnight dreary, while I pondered, weak and weary,--- {'neg': 0.481, 'neu': 0.519, 'pos': 0.0, 'compound': -0.7506}
+Over many a quaint and curious volume of forgotten lore—--------- {'neg': 0.156, 'neu': 0.656, 'pos': 0.189, 'compound': 0.1027}
+    While I nodded, nearly napping, suddenly there came a tapping, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+As of some one gently rapping, rapping at my chamber door.------- {'neg': 0.0, 'neu': 0.769, 'pos': 0.231, 'compound': 0.4588}
+“’Tis some visitor,” I muttered, “tapping at my chamber door—---- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            Only this and nothing more.”------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Ah, distinctly I remember it was in the bleak December;------ {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+And each separate dying ember wrought its ghost upon the floor.-- {'neg': 0.187, 'neu': 0.813, 'pos': 0.0, 'compound': -0.3182}
+    Eagerly I wished the morrow;—vainly I had sought to borrow--- {'neg': 0.0, 'neu': 0.776, 'pos': 0.224, 'compound': 0.3818}
+    From my books surcease of sorrow—sorrow for the lost Lenore—- {'neg': 0.204, 'neu': 0.796, 'pos': 0.0, 'compound': -0.3182}
+For the rare and radiant maiden whom the angels name Lenore—----- {'neg': 0.0, 'neu': 0.763, 'pos': 0.237, 'compound': 0.4767}
+            Nameless here for evermore.-------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    And the silken, sad, uncertain rustling of each purple curtain {'neg': 0.398, 'neu': 0.602, 'pos': 0.0, 'compound': -0.6486}
+Thrilled me—filled me with fantastic terrors never felt before;-- {'neg': 0.224, 'neu': 0.373, 'pos': 0.404, 'compound': 0.4404}
+    So that now, to still the beating of my heart, I stood repeating {'neg': 0.165, 'neu': 0.604, 'pos': 0.231, 'compound': 0.296}
+    “’Tis some visitor entreating entrance at my chamber door—--- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Some late visitor entreating entrance at my chamber door;—------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            This it is and nothing more.”------------------------ {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Presently my soul grew stronger; hesitating then no longer,-- {'neg': 0.348, 'neu': 0.455, 'pos': 0.197, 'compound': -0.25}
+“Sir,” said I, “or Madam, truly your forgiveness I implore;------ {'neg': 0.0, 'neu': 0.615, 'pos': 0.385, 'compound': 0.6124}
+    But the fact is I was napping, and so gently you came rapping, {'neg': 0.0, 'neu': 0.694, 'pos': 0.306, 'compound': 0.743}
+    And so faintly you came tapping, tapping at my chamber door,- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+That I scarce was sure I heard you”—here I opened wide the door;— {'neg': 0.0, 'neu': 0.856, 'pos': 0.144, 'compound': 0.2551}
+            Darkness there and nothing more.--------------------- {'neg': 0.333, 'neu': 0.667, 'pos': 0.0, 'compound': -0.25}
+    Deep into that darkness peering, long I stood there wondering, fearing, {'neg': 0.388, 'neu': 0.612, 'pos': 0.0, 'compound': -0.6908}
+Doubting, dreaming dreams no mortal ever dared to dream before;-- {'neg': 0.301, 'neu': 0.392, 'pos': 0.307, 'compound': 0.0258}
+    But the silence was unbroken, and the stillness gave no token, {'neg': 0.219, 'neu': 0.781, 'pos': 0.0, 'compound': -0.4215}
+    And the only word there spoken was the whispered word, “Lenore?” {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+This I whispered, and an echo murmured back the word, “Lenore!”—- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            Merely this and nothing more.------------------------ {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Back into the chamber turning, all my soul within me burning, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Soon again I heard a tapping somewhat louder than before.-------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    “Surely,” said I, “surely that is something at my window lattice; {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+      Let me see, then, what thereat is, and this mystery explore— {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Let my heart be still a moment and this mystery explore;—-------- {'neg': 0.0, 'neu': 0.704, 'pos': 0.296, 'compound': 0.6369}
+            ’Tis the wind and nothing more!”--------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Open here I flung the shutter, when, with many a flirt and flutter, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+In there stepped a stately Raven of the saintly days of yore;---- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Not the least obeisance made he; not a minute stopped or stayed he; {'neg': 0.0, 'neu': 0.878, 'pos': 0.122, 'compound': 0.1695}
+    But, with mien of lord or lady, perched above my chamber door— {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Perched upon a bust of Pallas just above my chamber door—-------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            Perched, and sat, and nothing more.------------------ {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Then this ebony bird beguiling my sad fancy into smiling,-------- {'neg': 0.22, 'neu': 0.567, 'pos': 0.213, 'compound': -0.0258}
+By the grave and stern decorum of the countenance it wore,------- {'neg': 0.206, 'neu': 0.794, 'pos': 0.0, 'compound': -0.3818}
+“Though thy crest be shorn and shaven, thou,” I said, “art sure no craven, {'neg': 0.133, 'neu': 0.727, 'pos': 0.139, 'compound': 0.0258}
+Ghastly grim and ancient Raven wandering from the Nightly shore—- {'neg': 0.291, 'neu': 0.709, 'pos': 0.0, 'compound': -0.5719}
+Tell me what thy lordly name is on the Night’s Plutonian shore!”- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            Quoth the Raven “Nevermore.”------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Much I marvelled this ungainly fowl to hear discourse so plainly, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Though its answer little meaning—little relevancy bore;---------- {'neg': 0.224, 'neu': 0.776, 'pos': 0.0, 'compound': -0.1868}
+    For we cannot help agreeing that no living human being------- {'neg': 0.481, 'neu': 0.519, 'pos': 0.0, 'compound': -0.6698}
+    Ever yet was blessed with seeing bird above his chamber door— {'neg': 0.0, 'neu': 0.719, 'pos': 0.281, 'compound': 0.5994}
+Bird or beast upon the sculptured bust above his chamber door,--- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            With such name as “Nevermore.”----------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    But the Raven, sitting lonely on the placid bust, spoke only- {'neg': 0.245, 'neu': 0.755, 'pos': 0.0, 'compound': -0.5023}
+That one word, as if his soul in that one word he did outpour.--- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Nothing farther then he uttered—not a feather then he fluttered— {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Till I scarcely more than muttered “Other friends have flown before— {'neg': 0.0, 'neu': 0.763, 'pos': 0.237, 'compound': 0.4767}
+On the morrow he will leave me, as my Hopes have flown before.”-- {'neg': 0.08, 'neu': 0.733, 'pos': 0.187, 'compound': 0.3818}
+            Then the bird said “Nevermore.”---------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Startled at the stillness broken by reply so aptly spoken,--- {'neg': 0.375, 'neu': 0.625, 'pos': 0.0, 'compound': -0.5859}
+“Doubtless,” said I, “what it utters is its only stock and store- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Caught from some unhappy master whom unmerciful Disaster----- {'neg': 0.535, 'neu': 0.465, 'pos': 0.0, 'compound': -0.7845}
+    Followed fast and followed faster till his songs one burden bore— {'neg': 0.225, 'neu': 0.775, 'pos': 0.0, 'compound': -0.4404}
+Till the dirges of his Hope that melancholy burden bore---------- {'neg': 0.467, 'neu': 0.359, 'pos': 0.174, 'compound': -0.5994}
+            Of ‘Never—nevermore’.”------------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    But the Raven still beguiling all my fancy into smiling,----- {'neg': 0.0, 'neu': 0.692, 'pos': 0.308, 'compound': 0.6124}
+Straight I wheeled a cushioned seat in front of bird, and bust and door; {'neg': 0.0, 'neu': 0.872, 'pos': 0.128, 'compound': 0.2263}
+    Then, upon the velvet sinking, I betook myself to linking---- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Fancy unto fancy, thinking what this ominous bird of yore—--- {'neg': 0.234, 'neu': 0.766, 'pos': 0.0, 'compound': -0.4118}
+What this grim, ungainly, ghastly, gaunt, and ominous bird of yore {'neg': 0.404, 'neu': 0.596, 'pos': 0.0, 'compound': -0.7269}
+            Meant in croaking “Nevermore.”----------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    This I sat engaged in guessing, but no syllable expressing--- {'neg': 0.221, 'neu': 0.632, 'pos': 0.146, 'compound': -0.2382}
+To the fowl whose fiery eyes now burned into my bosom’s core;---- {'neg': 0.179, 'neu': 0.821, 'pos': 0.0, 'compound': -0.34}
+    This and more I sat divining, with my head at ease reclining- {'neg': 0.0, 'neu': 0.682, 'pos': 0.318, 'compound': 0.5667}
+    On the cushion’s velvet lining that the lamp-light gloated o’er, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+But whose velvet-violet lining with the lamp-light gloating o’er, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            She shall press, ah, nevermore!---------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Then, methought, the air grew denser, perfumed from an unseen censer {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Swung by Seraphim whose foot-falls tinkled on the tufted floor.-- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    “Wretch,” I cried, “thy God hath lent thee—by these angels he hath sent thee {'neg': 0.156, 'neu': 0.719, 'pos': 0.126, 'compound': -0.128}
+    Respite—respite and nepenthe from thy memories of Lenore;---- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Quaff, oh quaff this kind nepenthe and forget this lost Lenore!”- {'neg': 0.286, 'neu': 0.476, 'pos': 0.238, 'compound': 0.1943}
+            Quoth the Raven “Nevermore.”------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    “Prophet!” said I, “thing of evil!—prophet still, if bird or devil!— {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Whether Tempter sent, or whether tempest tossed thee here ashore, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Desolate yet all undaunted, on this desert land enchanted—--- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    On this home by Horror haunted—tell me truly, I implore—----- {'neg': 0.253, 'neu': 0.548, 'pos': 0.199, 'compound': -0.2023}
+Is there—is there balm in Gilead?—tell me—tell me, I implore!”--- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+            Quoth the Raven “Nevermore.”------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    “Prophet!” said I, “thing of evil!—prophet still, if bird or devil! {'neg': 0.345, 'neu': 0.655, 'pos': 0.0, 'compound': -0.7412}
+By that Heaven that bends above us—by that God we both adore—---- {'neg': 0.0, 'neu': 0.649, 'pos': 0.351, 'compound': 0.6597}
+    Tell this soul with sorrow laden if, within the distant Aidenn, {'neg': 0.254, 'neu': 0.746, 'pos': 0.0, 'compound': -0.5267}
+    It shall clasp a sainted maiden whom the angels name Lenore—- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Clasp a rare and radiant maiden whom the angels name Lenore.”---- {'neg': 0.0, 'neu': 0.763, 'pos': 0.237, 'compound': 0.4767}
+            Quoth the Raven “Nevermore.”------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    “Be that word our sign of parting, bird or fiend!” I shrieked, upstarting— {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+“Get thee back into the tempest and the Night’s Plutonian shore!- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    Leave no black plume as a token of that lie thy soul hath spoken! {'neg': 0.235, 'neu': 0.765, 'pos': 0.0, 'compound': -0.4003}
+    Leave my loneliness unbroken!—quit the bust above my door!--- {'neg': 0.396, 'neu': 0.604, 'pos': 0.0, 'compound': -0.555}
+Take thy beak from out my heart, and take thy form from off my door!” {'neg': 0.0, 'neu': 0.757, 'pos': 0.243, 'compound': 0.6696}
+            Quoth the Raven “Nevermore.”------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    And the Raven, never flitting, still is sitting, still is sitting {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+On the pallid bust of Pallas just above my chamber door;--------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    And his eyes have all the seeming of a demon’s that is dreaming, {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+    And the lamp-light o’er him streaming throws his shadow on the floor; {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+And my soul from out that shadow that lies floating on the floor- {'neg': 0.189, 'neu': 0.811, 'pos': 0.0, 'compound': -0.4215}
+            Shall be lifted—nevermore!--------------------------- {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+AVERAGE SENTIMENT FOR PARAGRAPH: 	0.0
+
 -----------------------------------------------------------------Demo of amazon labelled-----------------------------------------------------------------
 So there is no way for me to plug it in here in the US unless I go by a converter. {'neg': 0.11, 'neu': 0.89, 'pos': 0.0, 'compound': -0.3535}
 Good case, Excellent value.-------------------------------------- {'neg': 0.0, 'neu': 0.1, 'pos': 0.9, 'compound': 0.8402}
@@ -3024,5 +3135,3 @@ Overall I was not impressed and would not go back.--------------- {'neg': 0.221,
 The whole experience was underwhelming, and I think we'll just go to Ninja Sushi next time. {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
 Then, as if I hadn't wasted enough of my life there, they poured salt in the wound by drawing out the time it took to bring the check. {'neg': 0.0, 'neu': 0.911, 'pos': 0.089, 'compound': 0.3875}
 AVERAGE SENTIMENT FOR PARAGRAPH: 	0.1805
-
-

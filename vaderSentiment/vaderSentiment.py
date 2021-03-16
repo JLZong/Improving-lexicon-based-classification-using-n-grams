@@ -598,14 +598,8 @@ if __name__ == '__main__':
     print("----------------------------------------------------")
     print(
         " - VADER works best when analysis is done at the sentence level (but it can work on single words or entire novels).")
-    # paragraph = "It was one of the worst movies I've seen, despite good reviews. Unbelievably bad acting!! Poor direction. VERY poor production. The movie was bad. Very bad movie. VERY BAD movie!"
+    paragraph = "It was one of the worst movies I've seen, despite good reviews. Unbelievably bad acting!! Poor direction. VERY poor production. The movie was bad. Very bad movie. VERY BAD movie!"
 
-    # The Raven
-    paragraph = "Once upon a midnight dreary, while I pondered, weak and weary. Over many a quaint and curious volume of forgotten lore. While I nodded, nearly napping, suddenly there came a tapping. As of some one gently rapping, rapping at my chamber door. \"Tis some visitor,\" I muttered, \"tapping at my chamber door. Only this and nothing more.\"."
-
-    paragraph="“Prophet!” said I, “thing of evil!—prophet still, if bird or devil! By that Heaven that bends above us—by that God we both adore. Tell this soul with sorrow laden if, within the distant Aidenn. It shall clasp a sainted maiden whom the angels name Lenore. Clasp a rare and radiant maiden whom the angels name Lenore. Quoth the Raven “Nevermore.”"
-
-    paragraph="“Be that word our sign of parting, bird or fiend!” I shrieked, upstarting—“Get thee back into the tempest and the Night’s Plutonian shore! Leave no black plume as a token of that lie thy soul hath spoken! Leave my loneliness unbroken!—quit the bust above my door! Take thy beak from out my heart, and take thy form from off my door! Quoth the Raven “Nevermore.”"
 
     print("  -- For example, given the following paragraph text from a hypothetical movie review:\n\t'{}'".format(
         paragraph))
