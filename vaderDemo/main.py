@@ -10,10 +10,6 @@ import pandas as pd
 import numpy as np
 import csv
 
-
-
-
-
 def demo_1():
     sentences = ['I like you just so so', 'I like you a little', 'I like you', 'I like you very much',
                  'I hate you just so so', 'I hate you a little', 'I hate you', 'I hate you very much', ]
