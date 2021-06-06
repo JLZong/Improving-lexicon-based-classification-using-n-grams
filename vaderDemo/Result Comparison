@@ -4,6 +4,13 @@ import csv
 import pandas as pd
 import math
 
+# def Get_Sum(list):
+#     sum = 0
+#     for item in list:
+#         sum += item
+#
+#     return sum
+
 def Get_Average(list):
     sum = 0
     for item in list:
@@ -11,12 +18,31 @@ def Get_Average(list):
 
     return sum/len(list)
 
-def Srandard_Deviation(list, mean):
-    sum=0
+def Euclidean_Distance(list):
+    euclidean=0
     for item in list:
-        sum+=(item-mean)**2
+        euclidean+=item**2
 
-    return (sum/(len(list)-1))**0.5
+    return euclidean**0.5
+
+def Manhattan_Distance(list):
+    manhattan=0
+    for item in list:
+     manhattan += item
+
+    return manhattan
+
+def Chebyshev_Distance(list):
+    chebyshev=max(list)
+
+    return chebyshev
+
+# def Srandard_Deviation(list, mean):
+#     sum=0
+#     for item in list:
+#         sum+=(item-mean)**2
+#
+#     return (sum/(len(list)-1))**0.5
 
 news_score=pd.read_csv("testdata/news_score.csv")
 news_original=pd.read_csv("testdata/news_original.csv")
@@ -79,44 +105,85 @@ for i in range(len(sci_fi_score["score"])):
     fbs_sci_fi_tf_idf.append(math.fabs((sci_fi_tf_idf["pos"][i] - sci_fi_tf_idf["neg"][i]) - sci_fi_score["score"][i]))
 
 mean_news_original=Get_Average(fbs_news_original)
-sd_news_original=Srandard_Deviation(fbs_news_original,mean_news_original)
+md_news_original=Manhattan_Distance(fbs_news_original)
+ed_news_original=Euclidean_Distance(fbs_news_original)
+cd_news_original=Chebyshev_Distance(fbs_news_original)
 mean_news_bi=Get_Average(fbs_news_bi)
-sd_news_bi=Srandard_Deviation(fbs_news_bi,mean_news_bi)
+md_news_bi=Manhattan_Distance(fbs_news_bi)
+ed_news_bi=Euclidean_Distance(fbs_news_bi)
+cd_news_bi=Chebyshev_Distance(fbs_news_bi)
 mean_news_tri=Get_Average(fbs_news_tri)
-sd_news_tri=Srandard_Deviation(fbs_news_tri,mean_news_tri)
+md_news_tri=Manhattan_Distance(fbs_news_tri)
+ed_news_tri=Euclidean_Distance(fbs_news_tri)
+cd_news_tri=Chebyshev_Distance(fbs_news_tri)
 mean_news_idf=Get_Average(fbs_news_idf)
-sd_news_idf=Srandard_Deviation(fbs_news_idf,mean_news_idf)
+md_news_idf=Manhattan_Distance(fbs_news_idf)
+ed_news_idf=Euclidean_Distance(fbs_news_idf)
+cd_news_idf=Chebyshev_Distance(fbs_news_idf)
 mean_news_tf_idf=Get_Average(fbs_news_tf_idf)
-sd_news_tf_idf=Srandard_Deviation(fbs_news_tf_idf,mean_news_tf_idf)
+md_news_tf_idf=Manhattan_Distance(fbs_news_tf_idf)
+ed_news_tf_idf=Euclidean_Distance(fbs_news_tf_idf)
+cd_news_tf_idf=Chebyshev_Distance(fbs_news_tf_idf)
 
 mean_story_original=Get_Average(fbs_story_original)
-sd_story_original=Srandard_Deviation(fbs_story_original,mean_story_original)
+md_story_original=Manhattan_Distance(fbs_story_original)
+ed_story_original=Euclidean_Distance(fbs_story_original)
+cd_story_original=Chebyshev_Distance(fbs_story_original)
 mean_story_bi=Get_Average(fbs_story_bi)
-sd_story_bi=Srandard_Deviation(fbs_story_bi,mean_story_bi)
+md_story_bi=Manhattan_Distance(fbs_story_bi)
+ed_story_bi=Euclidean_Distance(fbs_story_bi)
+cd_story_bi=Chebyshev_Distance(fbs_story_bi)
 mean_story_tri=Get_Average(fbs_story_tri)
-sd_story_tri=Srandard_Deviation(fbs_story_tri,mean_story_tri)
+md_story_tri=Manhattan_Distance(fbs_story_tri)
+ed_story_tri=Euclidean_Distance(fbs_story_tri)
+cd_story_tri=Chebyshev_Distance(fbs_story_tri)
 mean_story_idf=Get_Average(fbs_story_idf)
-sd_story_idf=Srandard_Deviation(fbs_story_idf,mean_story_idf)
+md_story_idf=Manhattan_Distance(fbs_story_idf)
+ed_story_idf=Euclidean_Distance(fbs_story_idf)
+cd_story_idf=Chebyshev_Distance(fbs_story_idf)
 mean_story_tf_idf=Get_Average(fbs_story_tf_idf)
-sd_story_tf_idf=Srandard_Deviation(fbs_story_tf_idf,mean_story_tf_idf)
+md_story_tf_idf=Manhattan_Distance(fbs_story_tf_idf)
+ed_story_tf_idf=Euclidean_Distance(fbs_story_tf_idf)
+cd_story_tf_idf=Chebyshev_Distance(fbs_story_tf_idf)
 
 mean_sci_fi_original=Get_Average(fbs_sci_fi_original)
-sd_sci_fi_original=Srandard_Deviation(fbs_sci_fi_original,mean_sci_fi_original)
+md_sci_fi_original=Manhattan_Distance(fbs_sci_fi_original)
+ed_sci_fi_original=Euclidean_Distance(fbs_sci_fi_original)
+cd_sci_fi_original=Chebyshev_Distance(fbs_sci_fi_original)
 mean_sci_fi_bi=Get_Average(fbs_sci_fi_bi)
-sd_sci_fi_bi=Srandard_Deviation(fbs_sci_fi_bi,mean_sci_fi_bi)
+md_sci_fi_bi=Manhattan_Distance(fbs_sci_fi_bi)
+ed_sci_fi_bi=Euclidean_Distance(fbs_sci_fi_bi)
+cd_sci_fi_bi=Chebyshev_Distance(fbs_sci_fi_bi)
 mean_sci_fi_tri=Get_Average(fbs_sci_fi_tri)
-sd_sci_fi_tri=Srandard_Deviation(fbs_sci_fi_tri,mean_sci_fi_tri)
+md_sci_fi_tri=Manhattan_Distance(fbs_sci_fi_tri)
+ed_sci_fi_tri=Euclidean_Distance(fbs_sci_fi_tri)
+cd_sci_fi_tri=Chebyshev_Distance(fbs_sci_fi_tri)
 mean_sci_fi_idf=Get_Average(fbs_sci_fi_idf)
-sd_sci_fi_idf=Srandard_Deviation(fbs_sci_fi_idf,mean_sci_fi_idf)
+md_sci_fi_idf=Manhattan_Distance(fbs_sci_fi_idf)
+ed_sci_fi_idf=Euclidean_Distance(fbs_sci_fi_idf)
+cd_sci_fi_idf=Chebyshev_Distance(fbs_sci_fi_idf)
 mean_sci_fi_tf_idf=Get_Average(fbs_sci_fi_tf_idf)
-sd_sci_fi_tf_idf=Srandard_Deviation(fbs_sci_fi_tf_idf,mean_sci_fi_tf_idf)
+md_sci_fi_tf_idf=Manhattan_Distance(fbs_sci_fi_tf_idf)
+ed_sci_fi_tf_idf=Euclidean_Distance(fbs_sci_fi_tf_idf)
+cd_sci_fi_tf_idf=Chebyshev_Distance(fbs_sci_fi_tf_idf)
 
 df_news=pd.DataFrame({"Mean Absolute Value":{"Original":mean_news_original, "Bi":mean_news_bi, "Tri":mean_news_tri, "IDF":mean_news_idf, "TF-IDF":mean_news_tf_idf},
-                      "Standard Deviation":{"Original":sd_news_original, "Bi":sd_news_bi, "Tri":sd_news_tri, "IDF":sd_news_idf, "TF-IDF":sd_news_tf_idf}})
+                      "Manhattan Distance":{"Original":md_news_original, "Bi":md_news_bi, "Tri":md_news_tri, "IDF":md_news_idf, "TF-IDF":md_news_tf_idf},
+                      "Euclidean Distance":{"Original":ed_news_original, "Bi":ed_news_bi, "Tri":ed_news_tri, "IDF":ed_news_idf, "TF-IDF":ed_news_tf_idf},
+                      "Chebyshev Distance":{"Original":cd_news_original, "Bi":cd_news_bi, "Tri":cd_news_tri, "IDF":cd_news_idf, "TF-IDF":cd_news_tf_idf}})
+df_news.to_csv("testdata/news_outcome.csv")
+
 df_story=pd.DataFrame({"Mean Absolute Value":{"Original":mean_story_original, "Bi":mean_story_bi, "Tri":mean_story_tri, "IDF":mean_story_idf, "TF-IDF":mean_story_tf_idf},
-                      "Standard Deviation":{"Original":sd_story_original, "Bi":sd_story_bi, "Tri":sd_story_tri, "IDF":sd_story_idf, "TF-IDF":sd_story_tf_idf}})
+                       "Manhattan Distance":{"Original":md_story_original, "Bi":md_story_bi, "Tri":md_story_tri, "IDF":md_story_idf, "TF-IDF":md_story_tf_idf},
+                       "Euclidean Distance":{"Original":ed_story_original, "Bi":ed_story_bi, "Tri":ed_story_tri, "IDF":ed_story_idf, "TF-IDF":ed_story_tf_idf},
+                       "Chebyshev Distance":{"Original":cd_story_original, "Bi":cd_story_bi, "Tri":cd_story_tri, "IDF":cd_story_idf, "TF-IDF":cd_story_tf_idf}})
+df_story.to_csv("testdata/story_outcome.csv")
+
 df_sci_fi=pd.DataFrame({"Mean Absolute Value":{"Original":mean_sci_fi_original, "Bi":mean_sci_fi_bi, "Tri":mean_sci_fi_tri, "IDF":mean_sci_fi_idf, "TF-IDF":mean_sci_fi_tf_idf},
-                      "Standard Deviation":{"Original":sd_sci_fi_original, "Bi":sd_sci_fi_bi, "Tri":sd_sci_fi_tri, "IDF":sd_sci_fi_idf, "TF-IDF":sd_sci_fi_tf_idf}})
+                        "Manhattan Distance":{"Original":md_sci_fi_original, "Bi":md_sci_fi_bi, "Tri":md_sci_fi_tri, "IDF":md_sci_fi_idf, "TF-IDF":md_sci_fi_tf_idf},
+                        "Euclidean Distance":{"Original":ed_sci_fi_original, "Bi":ed_sci_fi_bi, "Tri":ed_sci_fi_tri, "IDF":ed_sci_fi_idf, "TF-IDF":ed_sci_fi_tf_idf},
+                        "Chebyshev Distance":{"Original":cd_sci_fi_original, "Bi":cd_sci_fi_bi, "Tri":cd_sci_fi_tri, "IDF":cd_sci_fi_idf, "TF-IDF":cd_sci_fi_tf_idf}})
+df_sci_fi.to_csv("testdata/sci-fi_outcome.csv")
 
 fbs_total_original=fbs_news_original+fbs_story_original+fbs_sci_fi_original
 fbs_total_bi=fbs_news_bi+fbs_story_bi+fbs_sci_fi_bi
@@ -125,18 +192,32 @@ fbs_total_idf=fbs_news_idf+fbs_story_idf+fbs_sci_fi_idf
 fbs_total_tf_idf=fbs_news_tf_idf+fbs_story_tf_idf+fbs_sci_fi_tf_idf
 
 mean_total_original=Get_Average(fbs_total_original)
-sd_total_original=Srandard_Deviation(fbs_total_original,mean_total_original)
+md_total_original=Manhattan_Distance(fbs_total_original)
+ed_total_original=Euclidean_Distance(fbs_total_original)
+cd_total_original=Chebyshev_Distance(fbs_total_original)
 mean_total_bi=Get_Average(fbs_total_bi)
-sd_total_bi=Srandard_Deviation(fbs_total_bi,mean_total_bi)
+md_total_bi=Manhattan_Distance(fbs_total_bi)
+ed_total_bi=Euclidean_Distance(fbs_total_bi)
+cd_total_bi=Chebyshev_Distance(fbs_total_bi)
 mean_total_tri=Get_Average(fbs_total_tri)
-sd_total_tri=Srandard_Deviation(fbs_total_tri,mean_total_tri)
+md_total_tri=Manhattan_Distance(fbs_total_tri)
+ed_total_tri=Euclidean_Distance(fbs_total_tri)
+cd_total_tri=Chebyshev_Distance(fbs_total_tri)
 mean_total_idf=Get_Average(fbs_total_idf)
-sd_total_idf=Srandard_Deviation(fbs_total_idf,mean_total_idf)
+md_total_idf=Manhattan_Distance(fbs_total_idf)
+ed_total_idf=Euclidean_Distance(fbs_total_idf)
+cd_total_idf=Chebyshev_Distance(fbs_total_idf)
 mean_total_tf_idf=Get_Average(fbs_total_tf_idf)
-sd_total_tf_idf=Srandard_Deviation(fbs_total_tf_idf,mean_total_tf_idf)
+md_total_tf_idf=Manhattan_Distance(fbs_total_tf_idf)
+ed_total_tf_idf=Euclidean_Distance(fbs_total_tf_idf)
+cd_total_tf_idf=Chebyshev_Distance(fbs_total_tf_idf)
 
 df_total=pd.DataFrame({"Mean Absolute Value":{"Original":mean_total_original, "Bi":mean_total_bi, "Tri":mean_total_tri, "IDF":mean_total_idf, "TF-IDF":mean_total_tf_idf},
-                      "Standard Deviation":{"Original":sd_total_original, "Bi":sd_total_bi, "Tri":sd_total_tri, "IDF":sd_total_idf, "TF-IDF":sd_total_tf_idf}})
+                       "Manhattan Distance":{"Original":md_total_original, "Bi":md_total_bi, "Tri":md_total_tri, "IDF":md_total_idf, "TF-IDF":md_total_tf_idf},
+                       "Euclidean Distance":{"Original":ed_total_original, "Bi":ed_total_bi, "Tri":ed_total_tri, "IDF":ed_total_idf, "TF-IDF":ed_total_tf_idf},
+                       "Chebyshev Distance":{"Original":cd_total_original, "Bi":cd_total_bi, "Tri":cd_total_tri, "IDF":cd_total_idf, "TF-IDF":cd_total_tf_idf}})
+df_total.to_csv("testdata/total_outcome.csv")
+
 print("-------------------------------------------News-------------------------------------------")
 print(df_news)
 print("-------------------------------------------Story-------------------------------------------")
