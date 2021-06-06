@@ -1,0 +1,148 @@
+import pandas as pd
+import numpy as np
+import csv
+import pandas as pd
+import math
+
+def Get_Average(list):
+    sum = 0
+    for item in list:
+        sum += item
+
+    return sum/len(list)
+
+def Srandard_Deviation(list, mean):
+    sum=0
+    for item in list:
+        sum+=(item-mean)**2
+
+    return (sum/(len(list)-1))**0.5
+
+news_score=pd.read_csv("testdata/news_score.csv")
+news_original=pd.read_csv("testdata/news_original.csv")
+news_bi=pd.read_csv("testdata/news_bi.csv")
+news_tri=pd.read_csv("testdata/news_tri.csv")
+news_idf=pd.read_csv("testdata/news_idf.csv")
+news_tf_idf=pd.read_csv("testdata/news_tf_idf.csv")
+
+story_score=pd.read_csv("testdata/story_score.csv")
+story_original=pd.read_csv("testdata/story_original.csv")
+story_bi=pd.read_csv("testdata/story_bi.csv")
+story_tri=pd.read_csv("testdata/story_tri.csv")
+story_idf=pd.read_csv("testdata/story_idf.csv")
+story_tf_idf=pd.read_csv("testdata/story_tf_idf.csv")
+
+sci_fi_score=pd.read_csv("testdata/sci-fi_score.csv")
+sci_fi_original=pd.read_csv("testdata/sci-fi_original.csv")
+sci_fi_bi=pd.read_csv("testdata/sci-fi_bi.csv")
+sci_fi_tri=pd.read_csv("testdata/sci-fi_tri.csv")
+sci_fi_idf=pd.read_csv("testdata/sci-fi_idf.csv")
+sci_fi_tf_idf=pd.read_csv("testdata/sci-fi_tf_idf.csv")
+
+fbs_news_original=[]
+fbs_news_bi=[]
+fbs_news_tri=[]
+fbs_news_idf=[]
+fbs_news_tf_idf=[]
+
+fbs_story_original=[]
+fbs_story_bi=[]
+fbs_story_tri=[]
+fbs_story_idf=[]
+fbs_story_tf_idf=[]
+
+fbs_sci_fi_original=[]
+fbs_sci_fi_bi=[]
+fbs_sci_fi_tri=[]
+fbs_sci_fi_idf=[]
+fbs_sci_fi_tf_idf=[]
+
+for i in range(len(news_score["score"])):
+    fbs_news_original.append(math.fabs((news_original["pos"][i]-news_original["neg"][i])-news_score["score"][i]))
+    fbs_news_bi.append(math.fabs((news_bi["pos"][i] - news_bi["neg"][i]) - news_score["score"][i]))
+    fbs_news_tri.append(math.fabs((news_tri["pos"][i] - news_tri["neg"][i]) - news_score["score"][i]))
+    fbs_news_idf.append(math.fabs((news_idf["pos"][i] - news_idf["neg"][i]) - news_score["score"][i]))
+    fbs_news_tf_idf.append(math.fabs((news_tf_idf["pos"][i] - news_tf_idf["neg"][i]) - news_score["score"][i]))
+
+for i in range(len(story_score["score"])):
+    fbs_story_original.append(math.fabs((story_original["pos"][i]-story_original["neg"][i])-story_score["score"][i]))
+    fbs_story_bi.append(math.fabs((story_bi["pos"][i] - story_bi["neg"][i]) - story_score["score"][i]))
+    fbs_story_tri.append(math.fabs((story_tri["pos"][i] - story_tri["neg"][i]) - story_score["score"][i]))
+    fbs_story_idf.append(math.fabs((story_idf["pos"][i] - story_idf["neg"][i]) - story_score["score"][i]))
+    fbs_story_tf_idf.append(math.fabs((story_tf_idf["pos"][i] - story_tf_idf["neg"][i]) - story_score["score"][i]))
+
+for i in range(len(sci_fi_score["score"])):
+    fbs_sci_fi_original.append(math.fabs((sci_fi_original["pos"][i]-sci_fi_original["neg"][i])-sci_fi_score["score"][i]))
+    fbs_sci_fi_bi.append(math.fabs((sci_fi_bi["pos"][i] - sci_fi_bi["neg"][i]) - sci_fi_score["score"][i]))
+    fbs_sci_fi_tri.append(math.fabs((sci_fi_tri["pos"][i] - sci_fi_tri["neg"][i]) - sci_fi_score["score"][i]))
+    fbs_sci_fi_idf.append(math.fabs((sci_fi_idf["pos"][i] - sci_fi_idf["neg"][i]) - sci_fi_score["score"][i]))
+    fbs_sci_fi_tf_idf.append(math.fabs((sci_fi_tf_idf["pos"][i] - sci_fi_tf_idf["neg"][i]) - sci_fi_score["score"][i]))
+
+mean_news_original=Get_Average(fbs_news_original)
+sd_news_original=Srandard_Deviation(fbs_news_original,mean_news_original)
+mean_news_bi=Get_Average(fbs_news_bi)
+sd_news_bi=Srandard_Deviation(fbs_news_bi,mean_news_bi)
+mean_news_tri=Get_Average(fbs_news_tri)
+sd_news_tri=Srandard_Deviation(fbs_news_tri,mean_news_tri)
+mean_news_idf=Get_Average(fbs_news_idf)
+sd_news_idf=Srandard_Deviation(fbs_news_idf,mean_news_idf)
+mean_news_tf_idf=Get_Average(fbs_news_tf_idf)
+sd_news_tf_idf=Srandard_Deviation(fbs_news_tf_idf,mean_news_tf_idf)
+
+mean_story_original=Get_Average(fbs_story_original)
+sd_story_original=Srandard_Deviation(fbs_story_original,mean_story_original)
+mean_story_bi=Get_Average(fbs_story_bi)
+sd_story_bi=Srandard_Deviation(fbs_story_bi,mean_story_bi)
+mean_story_tri=Get_Average(fbs_story_tri)
+sd_story_tri=Srandard_Deviation(fbs_story_tri,mean_story_tri)
+mean_story_idf=Get_Average(fbs_story_idf)
+sd_story_idf=Srandard_Deviation(fbs_story_idf,mean_story_idf)
+mean_story_tf_idf=Get_Average(fbs_story_tf_idf)
+sd_story_tf_idf=Srandard_Deviation(fbs_story_tf_idf,mean_story_tf_idf)
+
+mean_sci_fi_original=Get_Average(fbs_sci_fi_original)
+sd_sci_fi_original=Srandard_Deviation(fbs_sci_fi_original,mean_sci_fi_original)
+mean_sci_fi_bi=Get_Average(fbs_sci_fi_bi)
+sd_sci_fi_bi=Srandard_Deviation(fbs_sci_fi_bi,mean_sci_fi_bi)
+mean_sci_fi_tri=Get_Average(fbs_sci_fi_tri)
+sd_sci_fi_tri=Srandard_Deviation(fbs_sci_fi_tri,mean_sci_fi_tri)
+mean_sci_fi_idf=Get_Average(fbs_sci_fi_idf)
+sd_sci_fi_idf=Srandard_Deviation(fbs_sci_fi_idf,mean_sci_fi_idf)
+mean_sci_fi_tf_idf=Get_Average(fbs_sci_fi_tf_idf)
+sd_sci_fi_tf_idf=Srandard_Deviation(fbs_sci_fi_tf_idf,mean_sci_fi_tf_idf)
+
+df_news=pd.DataFrame({"Mean Absolute Value":{"Original":mean_news_original, "Bi":mean_news_bi, "Tri":mean_news_tri, "IDF":mean_news_idf, "TF-IDF":mean_news_tf_idf},
+                      "Standard Deviation":{"Original":sd_news_original, "Bi":sd_news_bi, "Tri":sd_news_tri, "IDF":sd_news_idf, "TF-IDF":sd_news_tf_idf}})
+df_story=pd.DataFrame({"Mean Absolute Value":{"Original":mean_story_original, "Bi":mean_story_bi, "Tri":mean_story_tri, "IDF":mean_story_idf, "TF-IDF":mean_story_tf_idf},
+                      "Standard Deviation":{"Original":sd_story_original, "Bi":sd_story_bi, "Tri":sd_story_tri, "IDF":sd_story_idf, "TF-IDF":sd_story_tf_idf}})
+df_sci_fi=pd.DataFrame({"Mean Absolute Value":{"Original":mean_sci_fi_original, "Bi":mean_sci_fi_bi, "Tri":mean_sci_fi_tri, "IDF":mean_sci_fi_idf, "TF-IDF":mean_sci_fi_tf_idf},
+                      "Standard Deviation":{"Original":sd_sci_fi_original, "Bi":sd_sci_fi_bi, "Tri":sd_sci_fi_tri, "IDF":sd_sci_fi_idf, "TF-IDF":sd_sci_fi_tf_idf}})
+
+fbs_total_original=fbs_news_original+fbs_story_original+fbs_sci_fi_original
+fbs_total_bi=fbs_news_bi+fbs_story_bi+fbs_sci_fi_bi
+fbs_total_tri=fbs_news_tri+fbs_story_tri+fbs_sci_fi_tri
+fbs_total_idf=fbs_news_idf+fbs_story_idf+fbs_sci_fi_idf
+fbs_total_tf_idf=fbs_news_tf_idf+fbs_story_tf_idf+fbs_sci_fi_tf_idf
+
+mean_total_original=Get_Average(fbs_total_original)
+sd_total_original=Srandard_Deviation(fbs_total_original,mean_total_original)
+mean_total_bi=Get_Average(fbs_total_bi)
+sd_total_bi=Srandard_Deviation(fbs_total_bi,mean_total_bi)
+mean_total_tri=Get_Average(fbs_total_tri)
+sd_total_tri=Srandard_Deviation(fbs_total_tri,mean_total_tri)
+mean_total_idf=Get_Average(fbs_total_idf)
+sd_total_idf=Srandard_Deviation(fbs_total_idf,mean_total_idf)
+mean_total_tf_idf=Get_Average(fbs_total_tf_idf)
+sd_total_tf_idf=Srandard_Deviation(fbs_total_tf_idf,mean_total_tf_idf)
+
+df_total=pd.DataFrame({"Mean Absolute Value":{"Original":mean_total_original, "Bi":mean_total_bi, "Tri":mean_total_tri, "IDF":mean_total_idf, "TF-IDF":mean_total_tf_idf},
+                      "Standard Deviation":{"Original":sd_total_original, "Bi":sd_total_bi, "Tri":sd_total_tri, "IDF":sd_total_idf, "TF-IDF":sd_total_tf_idf}})
+print("-------------------------------------------News-------------------------------------------")
+print(df_news)
+print("-------------------------------------------Story-------------------------------------------")
+print(df_story)
+print("-------------------------------------------Sci-fi-------------------------------------------")
+print(df_sci_fi)
+print("-------------------------------------------Total-------------------------------------------")
+print(df_total)
+

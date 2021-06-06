@@ -256,6 +256,7 @@ class SentimentIntensityAnalyzer(object):
 
         sentiments = []
         words_and_emoticons = sentitext.words_and_emoticons
+        print()
         for i, item in enumerate(words_and_emoticons):
             valence = 0
             # check for vader_lexicon words that may be used as modifiers or negations
@@ -279,10 +280,26 @@ class SentimentIntensityAnalyzer(object):
         is_cap_diff = sentitext.is_cap_diff
         words_and_emoticons = sentitext.words_and_emoticons
         item_lowercase = item.lower()
+
+
         if item_lowercase in self.lexicon:
-            # get the sentiment valence 
-            valence = self.lexicon[item_lowercase]
-                
+            # get the sentiment valence
+
+            # valence = self.lexicon[item_lowercase]
+
+            # bi
+            if i > 0 and words_and_emoticons[i - 1].lower() in self.lexicon:
+                valence = self.lexicon[item_lowercase] / self.lexicon[words_and_emoticons[i - 1].lower()]
+            else:
+                valence = self.lexicon[item_lowercase]
+
+            # tri
+            # if i > 1:
+            #     score = self.lexicon[words_and_emoticons[i - 1].lower()]/self.lexicon[words_and_emoticons[i - 2].lower()]
+            #     valence=self.lexicon[item_lowercase]/score
+            # else:
+            #     valence = self.lexicon[item_lowercase]
+
             # check for "no" as negation for an adjacent lexicon item vs "no" as its own stand-alone lexicon item
             if item_lowercase == "no" and i != len(words_and_emoticons)-1 and words_and_emoticons[i + 1].lower() in self.lexicon:
                 # don't use valence of "no" as a lexicon item. Instead set it's valence to 0.0 and negate the next item
@@ -290,8 +307,11 @@ class SentimentIntensityAnalyzer(object):
             if (i > 0 and words_and_emoticons[i - 1].lower() == "no") \
                or (i > 1 and words_and_emoticons[i - 2].lower() == "no") \
                or (i > 2 and words_and_emoticons[i - 3].lower() == "no" and words_and_emoticons[i - 1].lower() in ["or", "nor"] ):
-                valence = self.lexicon[item_lowercase] * N_SCALAR
-            
+                # valence = self.lexicon[item_lowercase] * N_SCALAR
+                valence = valence * N_SCALAR
+
+
+
             # check if sentiment laden word is in ALL CAPS (while others aren't)
             if item.isupper() and is_cap_diff:
                 if valence > 0:

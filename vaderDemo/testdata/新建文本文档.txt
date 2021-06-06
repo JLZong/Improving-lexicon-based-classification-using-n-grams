@@ -1,0 +1,1 @@
+And our fish came down, too. He fell into a pot! He said, "Do I like this? Oh, no! I do not. This is not a good game," Said our fish as he lit. "No, I do not like it, Not one little bit!" {'neg': 0.11, 'neu': 0.839, 'pos': 0.051, 'compound': -0.4389}
